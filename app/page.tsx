@@ -13,8 +13,8 @@ export default function UIControlsLab() {
         
         
         <header className="text-center space-y-2">
-          <h1 className="text-3xl font-extrabold tracking-tight">Елементи інтерфейсу (UI Controls): Опис та приклади</h1>
-          <p className="text-slate-500">Лабораторна робота • Next.js & Tailwind CSS</p>
+          <h1 className="text-3xl font-extrabold tracking-tight">Елементи інтерфейсу</h1>
+          <p className="text-slate-500">Виконав студент групи ІП-44 Науменко Євгеній</p>
         </header>
 
         <div className="grid grid-cols-1 gap-8">
@@ -22,7 +22,7 @@ export default function UIControlsLab() {
           {/* 1. Radiobutton */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">1. Radiobutton (Радіокнопка)</h2>
+              <h2 className="text-xl font-bold text-slate-800">1. Radiobutton</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Використовується для вибору <em>однієї</em> опції з набору взаємовиключних варіантів. Коли користувач обирає новий елемент, попередній автоматично скасовується. Вони завжди групуються разом.
               </p>
@@ -43,7 +43,7 @@ export default function UIControlsLab() {
           {/* 2. Checkbox */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">2. Checkbox (Прапорець)</h2>
+              <h2 className="text-xl font-bold text-slate-800">2. Checkbox</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Дозволяє користувачеві вибирати <em>одне або кілька</em> незалежних значень одночасно. Кожен прапорець працює автономно і не впливає на стан інших.
               </p>
@@ -67,7 +67,7 @@ export default function UIControlsLab() {
           {/* 3. Text input */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">3. Text input (Текстове поле)</h2>
+              <h2 className="text-xl font-bold text-slate-800">3. Text input</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Призначене для введення та редагування довільних текстових даних користувачем (наприклад, у формах реєстрації, пошукових рядках, коментарях). Може бути однорядковим або багаторядковим (textarea).
               </p>
@@ -87,7 +87,7 @@ export default function UIControlsLab() {
           {/* 4. Tabs */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">4. Tabs (Вкладки)</h2>
+              <h2 className="text-xl font-bold text-slate-800">4. Tabs</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Організовують великі масиви контенту в окремі логічні блоки (вкладки), які перемикаються кліком миші. Це зменшує захаращеність інтерфейсу та полегшує навігацію.
               </p>
@@ -119,7 +119,7 @@ export default function UIControlsLab() {
           {/* 5. Button */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">5. Button (Кнопка)</h2>
+              <h2 className="text-xl font-bold text-slate-800">5. Button</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Слугує інтерактивним елементом для запуску певної дії у системі (надсилання форми, збереження змін, видалення даних). Візуально виділяється залежно від важливості (primary, secondary, danger).
               </p>
@@ -134,7 +134,7 @@ export default function UIControlsLab() {
           {/* 6. Text label */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">6. Text label (Текстова мітка)</h2>
+              <h2 className="text-xl font-bold text-slate-800">6. Text label</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Надає текстовий опис для інших елементів інтерфейсу (полів введення, вимикачів), інструкції користувачеві або системні повідомлення про статус (успіх/помилка). Підвищує доступність та зрозумілість форми.
               </p>
@@ -153,7 +153,7 @@ export default function UIControlsLab() {
           {/* 7. Link */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">7. Link (Гіперпосилання)</h2>
+              <h2 className="text-xl font-bold text-slate-800">7. Link</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Забезпечує перенаправлення користувача на інші сторінки сайту, зовнішні ресурси або файли. Зазвичай виділяється кольором та підкресленням.
               </p>
@@ -168,7 +168,7 @@ export default function UIControlsLab() {
           {/* 8. Tooltip */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">8. Tooltip (Підказка)</h2>
+              <h2 className="text-xl font-bold text-slate-800">8. Tooltip</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Показує коротку додаткову інформацію або пояснення при наведенні курсору миші на елемент. Дозволяє уникати захаращення інтерфейсу зайвим текстом.
               </p>
@@ -195,7 +195,7 @@ export default function UIControlsLab() {
           {/* 9. Dropdown list */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">9. Dropdown list (Випадаючий список)</h2>
+              <h2 className="text-xl font-bold text-slate-800">9. Dropdown list</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Дозволяє вибрати один або кілька варіантів із компактного списку, що розгортається при кліку. Економить простір на екрані порівняно з радіокнопками.
               </p>
@@ -213,7 +213,7 @@ export default function UIControlsLab() {
           {/* 10. Data grid */}
           <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-slate-800">10. Data grid (Таблиця даних)</h2>
+              <h2 className="text-xl font-bold text-slate-800">10. Data grid</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Використовується для представлення великих масивів структурованих даних у вигляді рядків і стовпчиків із можливістю сортування, фільтрації, пагінації та редагування.
               </p>

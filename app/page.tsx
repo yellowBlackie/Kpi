@@ -204,8 +204,8 @@ export default function UIControlsLab() {
               <label className="block text-xs font-semibold text-slate-600 mb-1">Країна:</label>
               <select className="w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer">
                 <option>Україна</option>
-                <option>Польща</option>
-                <option>Німеччина</option>
+                <option>Угорщина</option>
+                <option>США</option>
               </select>
             </div>
           </section>
@@ -222,21 +222,21 @@ export default function UIControlsLab() {
               <table className="w-full text-sm text-left bg-white border border-slate-200 rounded-lg overflow-hidden">
                 <thead className="bg-slate-100 text-slate-700 font-semibold border-b border-slate-200">
                   <tr>
-                    <th className="px-4 py-2">Ім'я</th>
-                    <th className="px-4 py-2">Вік</th>
-                    <th className="px-4 py-2">Місто</th>
+                    <th className="px-4 py-2">Марка</th>
+                    <th className="px-4 py-2">Рік</th>
+                    <th className="px-4 py-2">Країна</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200 text-slate-600">
                   <tr className="hover:bg-slate-50">
-                    <td className="px-4 py-2 font-medium text-slate-900">Анна</td>
-                    <td className="px-4 py-2">22</td>
-                    <td className="px-4 py-2">Київ</td>
+                    <td className="px-4 py-2 font-medium text-slate-900">БМВ</td>
+                    <td className="px-4 py-2">2021</td>
+                    <td className="px-4 py-2">Німеччина</td>
                   </tr>
                   <tr className="hover:bg-slate-50">
-                    <td className="px-4 py-2 font-medium text-slate-900">Іван</td>
-                    <td className="px-4 py-2">25</td>
-                    <td className="px-4 py-2">Берлін</td>
+                    <td className="px-4 py-2 font-medium text-slate-900">Мерседес</td>
+                    <td className="px-4 py-2">2012</td>
+                    <td className="px-4 py-2">Німеччина</td>
                   </tr>
                 </tbody>
               </table>

@@ -8,7 +8,7 @@ export default function UIControlsLab() {
   const [activeTab, setActiveTab] = useState('профіль');
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 p-6 md:p-12 font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-900 p-3 sm:p-6 md:p-12 font-sans">
       <div className="max-w-5xl mx-auto space-y-10">
         
         
@@ -20,7 +20,7 @@ export default function UIControlsLab() {
         <div className="grid grid-cols-1 gap-8">
           
           {/* 1. Radiobutton */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">1. Radiobutton</h2>
               <p className="text-sm text-slate-600 mt-1">
@@ -41,31 +41,37 @@ export default function UIControlsLab() {
           </section>
 
           {/* 2. Checkbox */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">2. Checkbox</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Дозволяє користувачеві вибирати <em>одне або кілька</em> незалежних значень одночасно. Кожен прапорець працює автономно і не впливає на стан інших.
               </p>
             </div>
-            <div className="p-4 bg-slate-50 rounded-lg border border-slate-100 space-y-3">
-              <span className="block text-sm font-semibold text-slate-700">Ваші інтереси:</span>
-              <div className="flex gap-6">
-                <label className="flex items-center gap-2 cursor-pointer text-sm">
-                  <input type="checkbox" className="w-4 h-4 rounded text-blue-600" /> Спорт
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer text-sm">
-                  <input type="checkbox" className="w-4 h-4 rounded text-blue-600" /> Музика
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer text-sm">
-                  <input type="checkbox" className="w-4 h-4 rounded text-blue-600" /> Мистецтво
-                </label>
+            
+<div className="p-4 bg-slate-50 rounded-lg border border-slate-100 space-y-3">
+  <span className="block text-sm font-semibold text-slate-700">
+    Ваші інтереси:
+  </span>
+              <div className="flex flex-wrap gap-x-6 gap-y-3">
+                {['Спорт', 'Музика', 'Мистецтво'].map((interest) => (
+                  <label
+                    key={interest}
+                    className="inline-flex items-center gap-2 cursor-pointer text-sm whitespace-nowrap"
+                  >
+                    <input
+                      type="checkbox"
+                      className="h-4 w-4 shrink-0 rounded accent-blue-600"
+                    />
+                    <span>{interest}</span>
+                  </label>
+                ))}
               </div>
             </div>
           </section>
 
           {/* 3. Text input */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">3. Text input</h2>
               <p className="text-sm text-slate-600 mt-1">
@@ -85,39 +91,60 @@ export default function UIControlsLab() {
           </section>
 
           {/* 4. Tabs */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">4. Tabs</h2>
               <p className="text-sm text-slate-600 mt-1">
                 <strong>Призначення:</strong> Організовують великі масиви контенту в окремі логічні блоки (вкладки), які перемикаються кліком миші. Це зменшує захаращеність інтерфейсу та полегшує навігацію.
               </p>
             </div>
-            <div className="p-4 bg-slate-50 rounded-lg border border-slate-100">
-              <div className="border border-slate-200 rounded-lg overflow-hidden bg-white">
-                <div className="flex border-b border-slate-200 bg-slate-100">
+            
+            <div className="p-3 sm:p-4 bg-slate-50 rounded-lg border border-slate-100">
+              <div className="min-w-0 overflow-hidden rounded-lg border border-slate-200 bg-white">
+                <div className="flex flex-col sm:flex-row bg-slate-100">
                   {['профіль', 'налаштування', 'безпека'].map((tab) => (
                     <button
                       key={tab}
+                      type="button"
                       onClick={() => setActiveTab(tab)}
-                      className={`flex-1 py-2 text-xs md:text-sm font-semibold capitalize transition-colors ${
-                        activeTab === tab ? 'bg-white text-blue-600 border-b-2 border-blue-600' : 'text-slate-500 hover:text-slate-700'
-                      }`}
+                      aria-pressed={activeTab === tab}
+                      className={`
+                        min-w-0 w-full sm:flex-1
+                        px-3 py-3 sm:py-2
+                        text-sm font-semibold capitalize
+                        text-left sm:text-center
+                        transition-colors
+                        ${
+                          activeTab === tab
+                            ? 'bg-white text-blue-600 border-l-2 border-blue-600 sm:border-l-0 sm:border-b-2'
+                            : 'text-slate-500 hover:text-slate-700 border-l-2 border-transparent sm:border-l-0 sm:border-b-2 sm:border-transparent'
+                        }
+                      `}
                     >
                       {tab}
                     </button>
                   ))}
                 </div>
+
                 <div className="p-4 text-sm text-slate-600">
-                  {activeTab === 'профіль' && <p>Вміст вкладки профілю: редагування особистих даних.</p>}
-                  {activeTab === 'налаштування' && <p>Вміст вкладки налаштувань: зміна системних параметрів.</p>}
-                  {activeTab === 'безпека' && <p>Вміст вкладки безпеки: зміна пароля та двофакторна автентифікація.</p>}
+                  {activeTab === 'профіль' && (
+                    <p>Вміст вкладки профілю: редагування особистих даних.</p>
+                  )}
+
+                  {activeTab === 'налаштування' && (
+                    <p>Вміст вкладки налаштувань: зміна системних параметрів.</p>
+                  )}
+
+                  {activeTab === 'безпека' && (
+                    <p>Вміст вкладки безпеки: зміна пароля та двофакторна автентифікація.</p>
+                  )}
                 </div>
               </div>
             </div>
           </section>
 
           {/* 5. Button */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">5. Button</h2>
               <p className="text-sm text-slate-600 mt-1">
@@ -132,7 +159,7 @@ export default function UIControlsLab() {
           </section>
 
           {/* 6. Text label */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">6. Text label</h2>
               <p className="text-sm text-slate-600 mt-1">
@@ -151,7 +178,7 @@ export default function UIControlsLab() {
           </section>
 
           {/* 7. Link */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">7. Link</h2>
               <p className="text-sm text-slate-600 mt-1">
@@ -166,7 +193,7 @@ export default function UIControlsLab() {
           </section>
 
           {/* 8. Tooltip */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">8. Tooltip</h2>
               <p className="text-sm text-slate-600 mt-1">
@@ -193,7 +220,7 @@ export default function UIControlsLab() {
           </section>
 
           {/* 9. Dropdown list */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">9. Dropdown list</h2>
               <p className="text-sm text-slate-600 mt-1">
@@ -211,7 +238,7 @@ export default function UIControlsLab() {
           </section>
 
           {/* 10. Data grid */}
-          <section className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+          <section className="min-w-0 bg-white p-4 sm:p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
             <div>
               <h2 className="text-xl font-bold text-slate-800">10. Data grid</h2>
               <p className="text-sm text-slate-600 mt-1">
